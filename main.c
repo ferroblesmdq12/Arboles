@@ -23,6 +23,22 @@ int main()
     printf("\t\t\t\t ║                                                                              ║\n");
     printf("\t\t\t\t ╚══════════════════════════════════════════════════════════════════════════════╝\n");
     printf("\n Hacer algo ...");
+    /// se inicializa ///
+
+    nodoArbol * inicArbol()
+    {
+        return NULL;
+    }
+
+    nodoArbol * crearNodoArbol(int dato)
+    {
+        nodoArbol * aux = (nodoArbol *) malloc(sizeof(nodoArbol));
+
+        aux ->dato=dato;
+        aux ->der=NULL;
+        aux ->izq=NULL;
+        return aux;
+    }
 
     return 0;
 }
