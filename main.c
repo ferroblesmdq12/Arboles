@@ -23,14 +23,22 @@ int main()
     printf("\t\t\t\t ║                                                                              ║\n");
     printf("\t\t\t\t ╚══════════════════════════════════════════════════════════════════════════════╝\n");
     printf("\n Hacer algo ...");
-    /// se inicializa ///
+   
 
-    nodoArbol * inicArbol()
+   
+
+    return 0;
+}
+
+/// se inicializa ///
+nodoArbol * inicArbol()
     {
         return NULL;
     }
 
-    nodoArbol * crearNodoArbol(int dato)
+/// Se crea ///
+
+nodoArbol * crearNodoArbol(int dato)
     {
         nodoArbol * aux = (nodoArbol *) malloc(sizeof(nodoArbol));
 
@@ -39,6 +47,3 @@ int main()
         aux ->izq=NULL;
         return aux;
     }
-
-    return 0;
-}
