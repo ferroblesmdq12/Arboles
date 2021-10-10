@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1491400450 source:c:\users\fernando\documents\github\arboles\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

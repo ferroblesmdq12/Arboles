@@ -6,6 +6,19 @@
 #include "gotoxy.h"
 
 
+struct nodoArbol
+{
+    int dato;
+    nodoArbol *izq;
+    nodoArbol *der;
+};
+
+/// PROTOTIPADO ///
+nodoArbol * inicArbol();
+nodoArbol * crearNodoArbol(int dato);
+nodoArbol * insertar(nodoArbol * arbol, int dato);
+
+
 int main()
 {
     color(10);
@@ -23,22 +36,49 @@ int main()
     printf("\t\t\t\t ║                                                                              ║\n");
     printf("\t\t\t\t ╚══════════════════════════════════════════════════════════════════════════════╝\n");
     printf("\n Hacer algo ...");
-    /// se inicializa ///
 
-    nodoArbol * inicArbol()
-    {
-        return NULL;
-    }
 
-    nodoArbol * crearNodoArbol(int dato)
-    {
-        nodoArbol * aux = (nodoArbol *) malloc(sizeof(nodoArbol));
-
-        aux ->dato=dato;
-        aux ->der=NULL;
-        aux ->izq=NULL;
-        return aux;
-    }
 
     return 0;
 }
+
+/*** FUNCIONES DE ARBOL ***/
+
+
+/// se inicializa ///
+
+nodoArbol * inicArbol()
+{
+    return NULL;
+}
+
+/// Se crea ///
+
+nodoArbol * crearNodoArbol(int dato)
+{
+    nodoArbol * aux = (nodoArbol *) malloc(sizeof(nodoArbol));
+
+    aux ->dato=dato;
+    aux ->der=NULL;
+    aux ->izq=NULL;
+    return aux;
+}
+
+
+/// Insertar ///
+
+nodoArbol * insertar(nodoArbol * arbol, int dato)
+{
+    if(arbol==NULL)
+        arbol = crearNodoArbol(dato);
+    else
+    {
+        if(dato>arbol->dato)
+            arbol->der = insertar(arbol->der, dato);
+        else
+            arbol->izq= insertar(arbol->izq,dato);
+    }
+    return arbol;
+}
+
+
