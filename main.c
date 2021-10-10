@@ -22,6 +22,7 @@ int main()
     printf("\t\t\t\t ║                              FUNCIONES                                       ║\n");
     printf("\t\t\t\t ║                                                                              ║\n");
     printf("\t\t\t\t ╚══════════════════════════════════════════════════════════════════════════════╝\n");
+    printf("\n Hacer algo ...");
 
     return 0;
 }
