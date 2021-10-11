@@ -4,3 +4,13 @@
 	<stdlib.h>
 	<windows.h>
 
+1633910890 source:c:\users\fernando\documents\github\arboles\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<strings.h>
+	<conio.h>
+	"gotoxy.h"
+
+1491399896 c:\users\fernando\documents\github\arboles\gotoxy.h
+
